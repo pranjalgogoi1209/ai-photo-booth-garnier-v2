@@ -67,7 +67,7 @@ export default function CameraPage({ setCapturedImg }) {
       <Header />
 
       <div className={`flex-col-center ${styles.cameraPageWrapper}`}>
-        
+
         <h1>{isCaptured ? "Do You Like This ?" : "SMILE AND CLICK!"}</h1>
         <main className={`flex-col-center ${styles.main}`}>
           <div className={styles.webcamParent}>
@@ -95,7 +95,7 @@ export default function CameraPage({ setCapturedImg }) {
 
         <footer className={`flex-col-center ${styles.footer}`}>
           {isCaptured ? (
-            <div className={`flex-row-center ${styles.foot}`}>
+            <div className={`flex-col-center ${styles.foot}`}>
               <button onClick={(e) => handleRetake(e)} className={`btn1`}>
                 RETAKE
               </button>
@@ -105,14 +105,14 @@ export default function CameraPage({ setCapturedImg }) {
               </button>
             </div>
           ) : (
-            <div className={`flex-row-center ${styles.foot}`}>
-              <button
+            <div className={`flex-col-center ${styles.foot}`}>
+              {/* <button
                 onClick={(e) => handleRetake(e)}
                 disabled={isCaptured ? false : true}
                 className={`btn1`}
               >
                 RETAKE
-              </button>
+              </button> */}
 
               <button onClick={(e) => handleCapture(e)} className={`btn1`}>
                 CAPTURE
@@ -120,6 +120,9 @@ export default function CameraPage({ setCapturedImg }) {
             </div>
           )}
         </footer>
+        <h2>
+          #DARETOGORED
+        </h2>
       </div>
     </div>
   );

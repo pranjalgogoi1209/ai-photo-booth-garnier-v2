@@ -50,12 +50,21 @@
   .footer {
     width: 100%;
     gap: 2vh;
+    height: 10vh;
+
     /* border: 1px solid black; */
+    border: 2px solid red;
+
     .foot {
       width: 100%;
-      /* border: 2px solid red; */
+      height: 100%;
       gap: 4vw;
     }
     
+  }
+  h2{
+      font-size: 10vw;
+      color: rgb(215, 54, 54);
+      font-family: 'AntonioBold';
   }
 }

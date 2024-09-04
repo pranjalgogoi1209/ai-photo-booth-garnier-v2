@@ -23,7 +23,7 @@ export default function OutputPage({ generatedImg, url, setUrl }) {
       <Header />
 
       <div className={`flex-col-center ${styles.outputPageWrapper}`}>
-        <h1>{generatedImg ? "All Done!" : "PLEASE WAIT...!"}</h1>
+        <h1>{generatedImg ? "All Done!" : "GENERATING YOUR AVATAR"}</h1>
 
         {generatedImg ? (
           <div className={`flex-col-center ${styles.generatedImgContainer}`}>
@@ -59,6 +59,7 @@ export default function OutputPage({ generatedImg, url, setUrl }) {
         <img src={printBtn} alt="generate-qr-button" />
       </div> */}
             </div>
+            
           </div>
         ) : (
           <div className={styles.loader}>
@@ -72,6 +73,7 @@ export default function OutputPage({ generatedImg, url, setUrl }) {
 
         {/* email */}
         {showEmail && <Email setShowEmail={setShowEmail} url={url} />}
+        
       </div>
     </div>
   );
