@@ -1,30 +1,48 @@
 .HomePage {
-  /* border: 1px solid black; */
-  background: url("./../../assets/dark-bg.png") center/cover no-repeat;
+  /* border: 1px solid red; */
+  /* background: url("./../../assets/dark-bg.png") center/cover no-repeat; */
 
   /* padding: 5vw 0; */
-  gap: 5vw;
+  /* gap: 5vw; */
   justify-content: flex-start !important;
   height: 100dvh;
   .avatarContainer {
-    /* border: 1px solid #fff; */
-    width: 85%;
-    height: 60%;
-    flex-wrap: wrap;
-    gap: 2vw;
+    /* border: 1px solid #000; */
+    width: 90%;
+    height: 55%;
+    /* flex-wrap: wrap; */
+    justify-content: flex-start !important;
+    gap: 2vh;
     .singleImg {
-      width: 23vw;
+      /* width: 23vw; */
+      width: 65%;
       border: 0.5vw solid #212121;
       border-radius: 2vw;
       img {
         border-radius: 2vw;
       }
     }
+    .homeTxt{
+      width: 100%;
+      /* border: 1px solid red; */
+      h2{
+        font-size: 7vw;
+        text-align: center;
+        font-family: 'gotham bold';
+      }
+    }
     .horiImg {
       width: 32vw;
     }
   }
-
+  .footerBtn{
+    gap: 2vh;
+    h2{
+      font-size: 10vw;
+      color: rgb(215, 54, 54);
+      font-family: 'AntonioBold';
+    }
+  }
   .startBtn {
     background-color: var(--themeColor1);
     color: #3c434b !important;

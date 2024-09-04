@@ -13,14 +13,15 @@ export default function GenderPage({ setGender, gender }) {
   return (
     <div className={`flex-col-center ${styles.GenderPage}`}>
       <Header />
-      <div className={`imgContainer ${styles.selectGenderTxt}`}>
+      <div className={`flex-col-center imgContainer ${styles.selectGenderTxt}`}>
         {/* <img src={selectGenderTxt} alt="select-gender-text" /> */}
         <h2>Select Your Gender</h2>
       </div>
 
       <div className={`flex-row-center ${styles.genderContainer}`}>
+
         <div
-          className={`${styles.imgContainer} ${styles.maleImg}`}
+          className={`flex-row-center ${styles.imgContainer} ${styles.maleImg}`}
           onClick={() => setGender("male")}
         >
           {/* 
@@ -34,7 +35,7 @@ export default function GenderPage({ setGender, gender }) {
           <img src={maleIcon} alt="" />
         </div>
         <div
-          className={` ${styles.imgContainer} ${styles.femaleImg}`}
+          className={`flex-row-center ${styles.imgContainer} ${styles.femaleImg}`}
           onClick={() => setGender("female")}
         >
           {gender == "female" && (
@@ -46,9 +47,14 @@ export default function GenderPage({ setGender, gender }) {
         </div>
       </div>
 
-      <button className="btn1" onClick={() => navigate("/camera")}>
-        Submit
+      <div className={`flex-col-center ${styles.footerBtn}`}>
+      <button className="btn1" onClick={() => navigate("/avatar")}>
+        Next
       </button>
+      <h2>
+        #DARETOGORED
+      </h2>
+      </div>
       {/* <div className={`flex-col-center ${styles.genderBtn}`}>
         <div
           onClick={() => {

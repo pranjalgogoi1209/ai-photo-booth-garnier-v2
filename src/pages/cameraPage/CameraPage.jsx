@@ -67,8 +67,8 @@ export default function CameraPage({ setCapturedImg }) {
       <Header />
 
       <div className={`flex-col-center ${styles.cameraPageWrapper}`}>
-        <h1>{isCaptured ? "Do You Like This ?" : "Capture Your Face"}</h1>
-
+        
+        <h1>{isCaptured ? "Do You Like This ?" : "SMILE AND CLICK!"}</h1>
         <main className={`flex-col-center ${styles.main}`}>
           <div className={styles.webcamParent}>
             {!img && (

@@ -2,11 +2,12 @@
   width: 100%;
   padding: 2vh 0vh 1.2vh 0vh;
   /* border: 2px solid red; */
-  height: 22vh;
+  height: 17vh;
   justify-content: flex-start !important;
   gap: 2vh;
   .imgContainer {
     width: 35vw;
+    /* border: 1px solid red; */
     /* height: 16.5vw; */
   }
   .titleImage {

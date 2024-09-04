@@ -15,6 +15,16 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: 'gotham bold';
+  src: url('./assets/fonts/GothamBold.ttf');
+}
+
+@font-face {
+  font-family: 'AntonioBold';
+  src: url('./assets/fonts/Antonio-Bold.ttf');
+}
+
 .silverForteFont {
   font-family: "SilverForte", sans-serif;
 }
@@ -35,12 +45,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "amazon amber", sans-serif;
+  /* font-family: "amazon amber", sans-serif; */
 }
 
 body {
   height: 100dvh;
   overflow-x: hidden;
+  background-image: url('./assets/BG.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 h1 {
@@ -49,6 +63,7 @@ h1 {
   text-align: center;
   line-height: 10vw;
 }
+
 
 a {
   /* color: #646cff; */
@@ -103,12 +118,12 @@ button {
 
 .btn1 {
   /* color: var(--textColor); */
-  width: 35vw;
-  font-size: 5.5vw;
+  width: 39vw;
+  font-size: 4.6vw;
   font-weight: 600;
   padding: 0.8vw 0;
   border: 0.3vw solid var(--textColor);
-  border-radius: 1.5vw;
+  border-radius: 3.6vw;
   color: #fff;
   background-color: #333e47;
 }

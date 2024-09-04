@@ -3,15 +3,12 @@ import styles from "./homePage.module.css";
 
 import { Link } from "react-router-dom";
 
-import homePageArr from "../../utils/home";
+// import homePageArr from "../../utils/home";
 
 import logo from "./../../assets/header/logo-white.png";
 
-import one from "./../../assets/home/card01.jpeg";
-import two from "./../../assets/home/card02.jpeg";
-import three from "./../../assets/home/card03.jpeg";
-import four from "./../../assets/home/card04.jpeg";
 import Header from "../../components/header/Header";
+import homeCard from '../../assets/home/homeImage.png'
 
 export default function HomePage({ setGender }) {
   const horiImgsIdx = [3, 4, 5, 6];
@@ -28,7 +25,7 @@ export default function HomePage({ setGender }) {
     <div className={`flex-col-center ${styles.HomePage}`}>
       <Header />
       <div className={`flex-col-center ${styles.avatarContainer}  `}>
-        {homePageArr?.map((item, idx) => (
+        {/* {homePageArr?.map((item, idx) => (
           <div
             key={idx}
             className={`flex-row-center ${styles.singleImg}  ${
@@ -37,12 +34,25 @@ export default function HomePage({ setGender }) {
           >
             <img src={item} alt="avatar" />
           </div>
-        ))}
+        ))} */}
+        <div className={`flex-row-center ${styles.singleImg}`}>
+          <img src={homeCard} alt="" />
+        </div>
+
+        <div className={`flex-col-center ${styles.homeTxt}`}>
+          <h2>CLICK TO TRANSFORM INTO YOUR AVATAR!</h2>
+        </div>
+        
       </div>
 
+      <div className={`flex-col-center ${styles.footerBtn}`}>
       <Link to={"/gender"}>
-        <button className={`btn1 ${styles.startBtn}`}>START</button>
+        <button className={`btn1 ${styles.startBtn}`}>START NOW</button>
       </Link>
+      <h2>
+        #DARETOGORED
+      </h2>
+      </div>
     </div>
   );
 }

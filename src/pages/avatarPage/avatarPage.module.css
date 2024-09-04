@@ -2,20 +2,29 @@
   height: 100dvh;
   gap: 4vw;
   justify-content: flex-start !important;
-  background: url("./../../assets/yellow-bg.jpg") center/cover no-repeat;
+  /* background: url("./../../assets/yellow-bg.jpg") center/cover no-repeat; */
+  .headingTxt{
+    width: 60vw;
+    /* border: 1px solid red; */
+    h1{
+      font-family: 'gotham bold';
+      font-size: 7.9vw;
+    }
+  }
   .main {
     /* border: 1px solid #000; */
-    width: 82%;
-    height: 62%;
+    width: 75%;
+    height: 50%;
     flex-wrap: wrap;
     gap: 1vw;
-    justify-content: center !important;
+    justify-content: space-between !important;
     align-items: flex-start !important;
+    /* border: 1px solid red; */
     .singleImageContainer {
-      width: 23vw;
+      width: 34vw;
       overflow: hidden;
       cursor: pointer;
-      border: 0.4vw solid transparent;
+      border: 0.4vw solid #000;
       border-radius: 2vw;
       &:hover .imgContainer {
         transform: scale(1.05);
@@ -67,8 +76,17 @@
       }
     }
     .horiImg {
-      width: 32vw;
+      /* width: 32vw; */
       /* border: 10px solid blue !important; */
+    }
+  }
+  .footer{
+    /* border: 1px solid red; */
+    h2{
+
+      font-size: 10vw;
+      color: rgb(215, 54, 54);
+      font-family: 'AntonioBold';
     }
   }
 }

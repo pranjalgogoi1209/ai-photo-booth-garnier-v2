@@ -140,13 +140,16 @@ export default function AvatarPage({
   return (
     <div className={`flex-col-center ${styles.AvatarPage}`}>
       <Header />
-      <h1>CHOOSE A TEMPLATE</h1>
+      <div className={styles.headingTxt}>
+      <h1>SELECT YOUR AVATAR</h1>
+      </div>
+      {/* <h2>Select Your Avatar</h2> */}
 
-      <main className={`flex-col-center ${styles.main}`}>
+      <main className={`flex-row-center ${styles.main}`}>
         {cards?.map((img, index) => (
           <div
             key={index}
-            className={`flex-col-center ${styles.singleImageContainer} ${
+            className={`flex-row-center ${styles.singleImageContainer} ${
               isHoriImg(index) ? `${styles.horiImg}` : ""
             }`}
             onClick={() => {
@@ -179,9 +182,12 @@ export default function AvatarPage({
 
       <footer
         onClick={handleSubmit}
-        className={`flex-row-center ${styles.footer}`}
+        className={`flex-col-center ${styles.footer}`}
       >
-        <button className={`btn1`}>SELECT</button>
+        <button className={`btn1`}>SUBMIT</button>
+        <h2>
+        #DARETOGORED
+      </h2>
       </footer>
       <ToastContainer />
     </div>
