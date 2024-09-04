@@ -1,0 +1,59 @@
+.CameraPage {
+  /* border: 1px solid black; */
+  height: 100dvh;
+  background: url("./../../assets/blue-bg.png") center/cover no-repeat;
+  justify-content: flex-start !important;
+
+  .cameraPageWrapper {
+    gap: 10vh;
+  }
+
+  .main {
+    width: 75vw;
+    min-height: 58.5vw;
+    /* border: 1px solid black; */
+    .webcamParent {
+      width: 100%;
+      min-height: 95%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      /* background: linear-gradient(white, white) padding-box,
+        linear-gradient(
+            to right,
+            var(--themeColor1),
+            var(--themeColor2),
+            var(--themeColor3)
+          )
+          border-box; */
+      border: 0.5vw solid #151414;
+      border-radius: 0.6vw;
+      #webcam {
+        width: 100%;
+      }
+      .countdown {
+        position: absolute;
+        top: 35%;
+        left: 48%;
+        color: #65c3cb;
+        font-size: 8.5vw;
+        font-weight: 600;
+      }
+      .capturedImage {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    /* border: 1px solid black; */
+    .foot {
+      width: 100%;
+      /* border: 2px solid red; */
+      gap: 4vw;
+    }
+  }
+}

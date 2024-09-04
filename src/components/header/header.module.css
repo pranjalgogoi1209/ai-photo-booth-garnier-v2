@@ -1,0 +1,30 @@
+.Header {
+  width: 100%;
+  padding: 2vh 0vh 1.2vh 0vh;
+  /* border: 2px solid red; */
+  height: 22vh;
+  justify-content: flex-start !important;
+  gap: 2vh;
+  .imgContainer {
+    width: 35vw;
+    /* height: 16.5vw; */
+  }
+  .titleImage {
+    width: 80vw;
+  }
+}
+
+.componentHeader {
+  padding: 2vw;
+  width: 100%;
+  justify-content: flex-start !important;
+  height: 15vh;
+  /* border: 2px solid red; */
+  .logo {
+    width: 100%;
+    align-items: flex-start !important;
+    img {
+      width: 18vw;
+    }
+  }
+}

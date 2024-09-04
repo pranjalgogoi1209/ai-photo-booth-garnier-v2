@@ -1,0 +1,45 @@
+.GenderPage {
+  /* margin-top: 10vw; */
+
+  /* border: 2px solid red; */
+  height: 100dvh;
+  justify-content: flex-start !important;
+  background: url("./../../assets/yellow-bg.jpg") center/cover no-repeat;
+
+  .selectGenderTxt {
+    width: 80vw;
+    h2 {
+      font-size: 8vw;
+    }
+  }
+
+  .genderContainer {
+    margin-bottom: 2vh;
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 65vh;
+    justify-content: space-around !important;
+    .imgContainer {
+      width: 32vw;
+      /* border: 2px solid black; */
+      border-radius: 0.6vw;
+      position: relative;
+      .select {
+        position: absolute;
+        width: 5.5vw;
+        top: 2vw;
+        left: 2vw;
+      }
+      img {
+        border-radius: 0.8vw;
+      }
+    }
+  }
+
+  .genderBtn {
+    gap: 5vw;
+    .femaleBtn {
+      width: 60vw;
+    }
+  }
+}

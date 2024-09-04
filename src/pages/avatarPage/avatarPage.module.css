@@ -1,0 +1,74 @@
+.AvatarPage {
+  height: 100dvh;
+  gap: 4vw;
+  justify-content: flex-start !important;
+  background: url("./../../assets/yellow-bg.jpg") center/cover no-repeat;
+  .main {
+    /* border: 1px solid #000; */
+    width: 82%;
+    height: 62%;
+    flex-wrap: wrap;
+    gap: 1vw;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    .singleImageContainer {
+      width: 23vw;
+      overflow: hidden;
+      cursor: pointer;
+      border: 0.4vw solid transparent;
+      border-radius: 2vw;
+      &:hover .imgContainer {
+        transform: scale(1.05);
+      }
+      &:hover .hoverContainer {
+        opacity: 1;
+      }
+      .parent {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        .imgContainer {
+          width: 100%;
+          height: 100%;
+          transition: all ease 0.5s;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .exception {
+          margin-bottom: 1.1vw;
+        }
+        .showHoverContainer {
+          opacity: 1 !important;
+          overflow: hidden;
+        }
+        .hoverContainer {
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            transparent,
+            transparent,
+            rgba(0, 0, 0, 1)
+          );
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: all ease 0.5s;
+          overflow: hidden;
+          .selectIcon {
+            position: absolute;
+            top: 1vw;
+            left: 5%;
+            width: 5vw;
+          }
+        }
+      }
+    }
+    .horiImg {
+      width: 32vw;
+      /* border: 10px solid blue !important; */
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.HomePage {
+  /* border: 1px solid black; */
+  background: url("./../../assets/dark-bg.png") center/cover no-repeat;
+
+  /* padding: 5vw 0; */
+  gap: 5vw;
+  justify-content: flex-start !important;
+  height: 100dvh;
+  .avatarContainer {
+    /* border: 1px solid #fff; */
+    width: 85%;
+    height: 60%;
+    flex-wrap: wrap;
+    gap: 2vw;
+    .singleImg {
+      width: 23vw;
+      border: 0.5vw solid #212121;
+      border-radius: 2vw;
+      img {
+        border-radius: 2vw;
+      }
+    }
+    .horiImg {
+      width: 32vw;
+    }
+  }
+
+  .startBtn {
+    background-color: var(--themeColor1);
+    color: #3c434b !important;
+    border: none !important;
+  }
+}
