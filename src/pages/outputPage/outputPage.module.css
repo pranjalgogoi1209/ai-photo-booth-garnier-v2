@@ -1,27 +1,14 @@
 .OutputPage {
-  height: calc(100vh - 30vh);
-  /* background: url("./../../assets/blue-bg.png") center/cover no-repeat; */
-
-  /* border: 1px solid #000; */
-  justify-content: flex-start !important;
-
-  .outputPageWrapper {
-    gap: 3vh;
-     /* border: 21px solid red;  */
-    /* width: 80%; */
-    /* height: 50vh; */
-  }
-
-  .loader {
-    margin-top: 30vw;
+  /* border: 1px solid black; */
+  .loaderContainer {
+    gap: 10vh;
     width: 70vw;
   }
   .generatedImgContainer {
-    gap: 8vw;
     /* border: 2px solid red; */
-    width: 42vh;
+    gap: 4vh;
     .imgContainer {
-      width: 80%;
+      width: 35vh;
       border-radius: 2vw;
       overflow: hidden;
     }

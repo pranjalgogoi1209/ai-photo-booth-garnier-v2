@@ -1,5 +1,5 @@
 .CameraPage {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: calc(100dvh - 30vh);
   gap: 4vh;
   h1 {
@@ -25,7 +25,7 @@
       }
       .countdown {
         position: absolute;
-        top: 34%;
+        top: 37%;
         left: 48%;
         color: var(--themeColor1);
         font-size: 8.5vw;

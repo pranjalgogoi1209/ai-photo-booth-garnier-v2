@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from "react";
+import axios from "axios";
 import styles from "./outputPage.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
 
+import { base64 } from "../../utils/base64";
 import Qr from "../../components/qr/Qr";
 import Email from "../../components/email/Email";
 import Loader from "../../components/loader/Loader";
-import { base64 } from "../../utils/base64";
-import axios from "axios";
-
+import Footer from "../../components/footer/Footer";
 
 export default function OutputPage({
   generatedImg,
@@ -29,10 +29,10 @@ export default function OutputPage({
     content: () => printRef.current,
   });
 
-  const navigateToHome=()=>{
+  const navigateToHome = () => {
     setGeneratedImg("");
-    navigate('/')
-  }
+    navigate("/");
+  };
   console.log(generatedImg);
 
   const getUrl = (url) => {
@@ -84,73 +84,60 @@ export default function OutputPage({
   }, []);
 
   return (
-    <div className={`flex-col-center ${styles.OutputPage}`}>
-      <div className={`flex-col-center ${styles.outputPageWrapper}`}>
-        <h1>
-          {generatedImg ? (
-            <>
-              READY TO <span style={{ display: "block" }}>DOWNLOAD</span>
-            </>
-          ) : (
-            <>
+    <div
+      className={`flex-col-center ${styles.OutputPage}`}
+      style={{
+        height: !generatedImg ? "calc(100dvh - 30vh)" : "calc(100dvh - 18vh)",
+      }}
+    >
+      {generatedImg ? (
+        <div className={`flex-col-center ${styles.generatedImgContainer}`}>
+          <h1>
+            READY TO <span style={{ display: "block" }}>DOWNLOAD</span>
+          </h1>
+
+          <div className={styles.imgContainer}>
+            <img
+              ref={printRef}
+              className={styles.generatedImg}
+              src={generatedImg}
+              alt="generated-image"
+            />
+          </div>
+
+          <div className={`flex-col-center ${styles.btnContainer}`}>
+            {/* generate qr */}
+            <div onClick={() => setShowQr(true)}>
+              <button className={`btn1`}>GENERATE QR</button>
+            </div>
+
+            {/* print */}
+            <div onClick={() => handlePrint()}>
+              <button className={`btn1`}>PRINT</button>
+            </div>
+
+            {/* start again */}
+            <div>
+              <button className="btn1" onClick={navigateToHome}>
+                START AGAIN
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div className={`flex-col-center ${styles.loaderContainer}`}>
+          <h1>
             GENERATING <span style={{ display: "block" }}>YOUR AVATAR</span>
-          </>
-            
-          )}
-        </h1>
+          </h1>
+          <Loader />
+        </div>
+      )}
 
-        {generatedImg ? (
-          <div className={`flex-col-center ${styles.generatedImgContainer}`}>
-            <div className={styles.imgContainer}>
-              <img
-                ref={printRef}
-                className={styles.generatedImg}
-                src={generatedImg}
-                alt="generated-image"
-              />
-            </div>
+      {/* qr */}
+      {showQr && <Qr url={url} setShowQr={setShowQr} />}
 
-            <div className={`flex-col-center ${styles.btnContainer}`}>
-              {/* generate qr */}
-              <div
-                onClick={() => setShowQr(true)}
-                // className={`imgContainer ${styles.btn}`}
-              >
-                <button className={`btn1`}>GENERATE QR</button>
-              </div>
-
-              {/* email */}
-              <div
-                onClick={() => handlePrint()}
-                /* className={`imgContainer ${styles.btn}`} */
-              >
-                {/*  <img src={emailBtn} alt="generate-qr-button" /> */}
-                <button className={`btn1`}>PRINT</button>
-              </div>
-
-              <div>
-                <button className="btn1" onClick={navigateToHome}>START AGAIN</button>
-              </div>
-
-              {/* print */}
-              {/* <div onClick={handlePrint} className={`imgContainer ${styles.btn}`}>
-        <img src={printBtn} alt="generate-qr-button" />
-      </div> */}
-            </div>
-          </div>
-        ) : (
-          <div className={styles.loader}>
-            {/* <img src={loader} alt="loader" /> */}
-            <Loader />
-          </div>
-        )}
-
-        {/* qr */}
-        {showQr && <Qr url={url} setShowQr={setShowQr} />}
-
-        {/* email */}
-        {showEmail && <Email setShowEmail={setShowEmail} url={url} />}
-      </div>
+      {/* email */}
+      {showEmail && <Email setShowEmail={setShowEmail} url={url} />}
     </div>
   );
 }
