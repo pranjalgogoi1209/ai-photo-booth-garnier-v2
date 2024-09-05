@@ -53,12 +53,16 @@ export default function App() {
         <Route
           path="/output"
           element={
-            <OutputPage generatedImg={generatedImg} url={url} setUrl={setUrl} />
+            <OutputPage generatedImg={generatedImg} 
+                        url={url} setUrl={setUrl} 
+                        setGeneratedImg={setGeneratedImg}
+                        capturedImg={capturedImg}
+                        selectedAvatar={selectedAvatar} />
           }
         />
       </Routes>
 
-      <Footer />
+      {!generatedImg && <Footer />}
     </BrowserRouter>
   );
 }
