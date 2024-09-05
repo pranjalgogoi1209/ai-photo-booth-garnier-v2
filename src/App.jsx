@@ -17,6 +17,9 @@ export default function App() {
   const [generatedImg, setGeneratedImg] = useState();
   const [url, setUrl] = useState();
   const [gender, setGender] = useState();
+  const [selectedAvatar, setSelectedAvatar] = useState();
+
+  console.log(selectedAvatar);
 
   return (
     <BrowserRouter>
@@ -42,12 +45,7 @@ export default function App() {
         <Route
           path="/avatar"
           element={
-            <AvatarPage
-              setGeneratedImg={setGeneratedImg}
-              capturedImg={capturedImg}
-              setUrl={setUrl}
-              gender={gender}
-            />
+            <AvatarPage gender={gender} setSelectedAvatar={setSelectedAvatar} />
           }
         />
 
