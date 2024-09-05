@@ -1,16 +1,21 @@
 .CameraPage {
-  /* border: 1px solid black; */
-  height: 100dvh;
+  border: 1px solid red;
+  height:calc(100dvh - 30vh);
   /* background: url("./../../assets/blue-bg.png") center/cover no-repeat; */
   justify-content: flex-start !important;
-
+  gap: 5vh;
+  padding-top: 2vh;
+  h1{
+    text-transform: uppercase;
+  }
   .cameraPageWrapper {
-    gap: 10vh;
+    gap: 12vh;
+    /* border: 1px solid red; */
   }
 
   .main {
-    width: 75vw;
-    min-height: 58.5vw;
+    width: 44vh;
+    min-height: 35vh;
     /* border: 1px solid black; */
     .webcamParent {
       width: 100%;
@@ -28,8 +33,8 @@
             var(--themeColor3)
           )
           border-box; */
-      border: 0.5vw solid #151414;
-      border-radius: 0.6vw;
+      border: 0.5vw solid #212121;
+      border-radius: 6vw;
       #webcam {
         width: 100%;
       }
@@ -49,9 +54,10 @@
 
   .footer {
     width: 100%;
+    margin-top: auto;
+    margin-bottom: 1vh;
     gap: 2vh;
-    height: 10vh;
-
+    /* height: 13vh; */
     /* border: 1px solid black; */
     border: 2px solid red;
 
@@ -61,10 +67,5 @@
       gap: 4vw;
     }
     
-  }
-  h2{
-      font-size: 10vw;
-      color: rgb(215, 54, 54);
-      font-family: 'AntonioBold';
   }
 }
