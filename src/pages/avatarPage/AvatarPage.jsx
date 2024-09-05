@@ -14,7 +14,6 @@ import {
 import { base64 } from "../../utils/base64";
 
 import select from "./../../assets/select1.png";
-import Header from "../../components/header/Header";
 
 export default function AvatarPage({
   setGeneratedImg,
@@ -28,16 +27,6 @@ export default function AvatarPage({
   const [selectedImageIndex, setSelectedImageIndex] = useState();
   const [cards, setCards] = useState([]);
 
-  const horiImgsIdx = [3, 4, 5, 6];
-  const isHoriImg = (idx) => {
-    return horiImgsIdx.includes(idx);
-  };
-
-  console.log(capturedImg);
-
-  // console.log(cardsArr);
-
-  //
   useEffect(() => {
     if (gender.toLowerCase() === "female") {
       setCards(femaleCardsArr);
@@ -115,7 +104,6 @@ export default function AvatarPage({
             })
             .then(function (response) {
               console.log("log while generation images");
-              // console.log(response.data.result,'response data');
               // console.log('response from server')
               setGeneratedImg(`data:image/webp;base64,${response.data.result}`);
               // image uploading on server
@@ -139,22 +127,16 @@ export default function AvatarPage({
 
   return (
     <div className={`flex-col-center ${styles.AvatarPage}`}>
-      <Header />
-      <div className={styles.headingTxt}>
-      <h1>SELECT YOUR AVATAR</h1>
-      </div>
-      {/* <h2>Select Your Avatar</h2> */}
-
+      <h1>
+        SELECT YOUR <br /> AVATAR
+      </h1>
       <main className={`flex-row-center ${styles.main}`}>
         {cards?.map((img, index) => (
           <div
             key={index}
-            className={`flex-row-center ${styles.singleImageContainer} ${
-              isHoriImg(index) ? `${styles.horiImg}` : ""
-            }`}
+            className={`flex-row-center ${styles.singleImageContainer}`}
             onClick={() => {
               setSelectedImageIndex(index);
-              /* setSelectedImage(filterOriginalImg(index)); */
               const originalImg = filterOriginalImg(index);
               setOriginalImg(originalImg);
             }}
@@ -179,16 +161,10 @@ export default function AvatarPage({
           </div>
         ))}
       </main>
+      <button onClick={handleSubmit} className={`btn1`}>
+        SUBMIT
+      </button>
 
-      <footer
-        onClick={handleSubmit}
-        className={`flex-col-center ${styles.footer}`}
-      >
-        <button className={`btn1`}>SUBMIT</button>
-        <h2>
-        #DARETOGORED
-      </h2>
-      </footer>
       <ToastContainer />
     </div>
   );

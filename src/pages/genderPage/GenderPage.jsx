@@ -4,77 +4,56 @@ import { useNavigate } from "react-router-dom";
 
 import maleIcon from "./../../assets/gender/male_icon.png";
 import femaleIcon from "./../../assets/gender/female_icon.png";
-import selectIcon from "./../../assets/gender/select2.png";
-import Header from "../../components/header/Header";
+import selectGender from "./../../assets/gender/selectGender.png";
 
 export default function GenderPage({ setGender, gender }) {
   const navigate = useNavigate();
 
   return (
     <div className={`flex-col-center ${styles.GenderPage}`}>
-      <Header />
-      <div className={`flex-col-center imgContainer ${styles.selectGenderTxt}`}>
-        {/* <img src={selectGenderTxt} alt="select-gender-text" /> */}
-        <h2>Select Your Gender</h2>
-      </div>
+      <h1>
+        SELECT YOUR <br /> GENDER
+      </h1>
 
       <div className={`flex-row-center ${styles.genderContainer}`}>
+        <div className={`flex-col-center ${styles.maleContainer}`}>
+          <div
+            className={`flex-row-center ${styles.imgContainer}`}
+            onClick={() => setGender("male")}
+          >
+            <img src={maleIcon} alt="maleIcon" />
+            {gender == "male" && (
+              <div className={`${styles.select}`}>
+                <img src={selectGender} alt="select" />
+              </div>
+            )}
+          </div>
 
-        <div
-          className={`flex-row-center ${styles.imgContainer} ${styles.maleImg}`}
-          onClick={() => setGender("male")}
-        >
-          {/* 
-            add here select gender=='male
-          */}
-          {gender == "male" && (
-            <div className={`${styles.select}`}>
-              <img src={selectIcon} alt="" />
-            </div>
-          )}
-          <img src={maleIcon} alt="" />
+          <p className={styles.gender}>MALE</p>
         </div>
-        <div
-          className={`flex-row-center ${styles.imgContainer} ${styles.femaleImg}`}
-          onClick={() => setGender("female")}
-        >
-          {gender == "female" && (
-            <div className={`${styles.select}`}>
-              <img src={selectIcon} alt="" />
-            </div>
-          )}
-          <img src={femaleIcon} alt="" />
+
+        <div className={`flex-col-center ${styles.femaleContainer}`}>
+          <div
+            className={`flex-row-center ${styles.imgContainer} ${styles.femaleImg}`}
+            onClick={() => setGender("female")}
+          >
+            {gender == "female" && (
+              <div className={`${styles.select}`}>
+                <img src={selectGender} alt="" />
+              </div>
+            )}
+            <img src={femaleIcon} alt="" />
+          </div>
+          <p className={styles.gender}>FEMALE</p>
         </div>
       </div>
 
-      <div className={`flex-col-center ${styles.footerBtn}`}>
-      <button className="btn1" onClick={() => navigate("/avatar")}>
-        Next
+      <button
+        className={`btn1 ${styles.nxtBtn}`}
+        onClick={() => navigate("/avatar")}
+      >
+        NEXT
       </button>
-      <h2>
-        #DARETOGORED
-      </h2>
-      </div>
-      {/* <div className={`flex-col-center ${styles.genderBtn}`}>
-        <div
-          onClick={() => {
-            setGender("male");
-            navigate("/camera");
-          }}
-          className={`imgContainer ${styles.femaleBtn}`}
-        >
-          <img src={maleBtn} alt="male" />
-        </div>
-        <div
-          onClick={() => {
-            setGender("female");
-            navigate("/camera");
-          }}
-          className={`imgContainer ${styles.femaleBtn}`}
-        >
-          <img src={femaleBtn} alt="female" />
-        </div>
-      </div> */}
     </div>
   );
 }

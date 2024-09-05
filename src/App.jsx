@@ -20,6 +20,8 @@ export default function App() {
 
   return (
     <BrowserRouter>
+      <Header />
+
       <Routes>
         {/* home-page */}
         <Route path="/" element={<HomePage setGender={setGender} />} />
@@ -57,7 +59,8 @@ export default function App() {
           }
         />
       </Routes>
-      {/* <Footer /> */}
+
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -1,31 +1,9 @@
 .Header {
   width: 100%;
-  padding: 2vh 0vh 1.2vh 0vh;
-  /* border: 2px solid red; */
-  height: 17vh;
-  justify-content: flex-start !important;
+  height: 18vh;
   gap: 2vh;
+  border: 2px solid red;
   .imgContainer {
-    width: 35vw;
-    /* border: 1px solid red; */
-    /* height: 16.5vw; */
-  }
-  .titleImage {
-    width: 80vw;
-  }
-}
-
-.componentHeader {
-  padding: 2vw;
-  width: 100%;
-  justify-content: flex-start !important;
-  height: 15vh;
-  /* border: 2px solid red; */
-  .logo {
-    width: 100%;
-    align-items: flex-start !important;
-    img {
-      width: 18vw;
-    }
+    width: 22vh;
   }
 }
