@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "./outputPage.module.css";
 import { Link } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
@@ -17,6 +17,20 @@ export default function OutputPage({ generatedImg, url, setUrl }) {
     content: () => printRef.current,
   });
   console.log(generatedImg);
+
+  /* 
+function sir defination => 
+  api call Ashish sir (generated img upload on server)
+  response => setUrl(response)
+*/
+
+  useEffect(() => {
+    // base 64 => selectedAvatar
+    // ai server api call Varun bhai
+    // response => seGeneratedImg("response")
+    //SIR()
+  }, []);
+
   return (
     <div className={`flex-col-center ${styles.OutputPage}`}>
       <div className={`flex-col-center ${styles.outputPageWrapper}`}>
