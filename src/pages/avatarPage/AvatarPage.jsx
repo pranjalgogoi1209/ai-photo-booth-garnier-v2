@@ -96,7 +96,11 @@ export default function AvatarPage({ gender, setSelectedAvatar }) {
         ))}
       </main>
 
-      <button onClick={handleSubmit} className={`btn1`}>
+      <button
+        onClick={handleSubmit}
+        className={`btn1`}
+        disabled={selectedImageIndex >= 0 ? false : true}
+      >
         SUBMIT
       </button>
 

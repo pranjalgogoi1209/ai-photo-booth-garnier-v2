@@ -6,7 +6,6 @@ import { useReactToPrint } from "react-to-print";
 import Qr from "../../components/qr/Qr";
 import Email from "../../components/email/Email";
 import Loader from "../../components/loader/Loader";
-import Header from "../../components/header/Header";
 
 export default function OutputPage({ generatedImg, url, setUrl }) {
   const printRef = useRef();
@@ -20,8 +19,6 @@ export default function OutputPage({ generatedImg, url, setUrl }) {
   console.log(generatedImg);
   return (
     <div className={`flex-col-center ${styles.OutputPage}`}>
-      <Header />
-
       <div className={`flex-col-center ${styles.outputPageWrapper}`}>
         <h1>{generatedImg ? "All Done!" : "GENERATING YOUR AVATAR"}</h1>
 
@@ -59,7 +56,6 @@ export default function OutputPage({ generatedImg, url, setUrl }) {
         <img src={printBtn} alt="generate-qr-button" />
       </div> */}
             </div>
-            
           </div>
         ) : (
           <div className={styles.loader}>
@@ -73,7 +69,6 @@ export default function OutputPage({ generatedImg, url, setUrl }) {
 
         {/* email */}
         {showEmail && <Email setShowEmail={setShowEmail} url={url} />}
-        
       </div>
     </div>
   );

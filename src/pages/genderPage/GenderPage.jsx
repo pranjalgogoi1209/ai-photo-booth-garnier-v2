@@ -51,6 +51,7 @@ export default function GenderPage({ setGender, gender }) {
       <button
         className={`btn1 ${styles.nxtBtn}`}
         onClick={() => navigate("/avatar")}
+        disabled={!gender}
       >
         NEXT
       </button>

@@ -56,7 +56,7 @@ export default function CameraPage({ setCapturedImg }) {
   const handleSubmit = () => {
     if (img) {
       setCapturedImg(img);
-      navigate("/avatar");
+      navigate("/output");
     } else {
       toast.error("Please capture your image", toastOptions);
     }
@@ -64,11 +64,10 @@ export default function CameraPage({ setCapturedImg }) {
 
   return (
     <div className={`flex-col-center ${styles.CameraPage}`}>
-
-        <h1>{isCaptured ? "Do You Like This ?" : "SMILE AND CLICK!"}</h1>
+      <h1>{isCaptured ? "Do You Like This ?" : "SMILE AND CLICK!"}</h1>
       <div className={`flex-col-center ${styles.cameraPageWrapper}`}>
         <main className={`flex-col-center ${styles.main}`}>
-          <div className={styles.webcamParent}>
+          <div className={`flex-row-center ${styles.webcamParent}`}>
             {!img && (
               <Webcam
                 ref={webRef}
@@ -91,34 +90,26 @@ export default function CameraPage({ setCapturedImg }) {
           </div>
         </main>
       </div>
-        <footer className={`flex-col-center ${styles.footer}`}>
-          {isCaptured ? (
-            <div className={`flex-col-center ${styles.foot}`}>
-              <button onClick={handleSubmit} className={`btn1`}>
-               YES! SUBMIT
-              </button>
 
-              <button onClick={(e) => handleRetake(e)} className={`btn1`}>
-                RETAKE
-              </button>
+      <footer className={`flex-col-center ${styles.footer}`}>
+        {isCaptured ? (
+          <div className={`flex-col-center ${styles.foot}`}>
+            <button onClick={handleSubmit} className={`btn1`}>
+              YES! SUBMIT
+            </button>
 
-            </div>
-          ) : (
-            <div className={`flex-col-center ${styles.foot}`}>
-              {/* <button
-                onClick={(e) => handleRetake(e)}
-                disabled={isCaptured ? false : true}
-                className={`btn1`}
-              >
-                RETAKE
-              </button> */}
-
-              <button onClick={(e) => handleCapture(e)} className={`btn1`}>
-                CAPTURE
-              </button>
-            </div>
-          )}
-        </footer>
+            <button onClick={(e) => handleRetake(e)} className={`btn1`}>
+              RETAKE
+            </button>
+          </div>
+        ) : (
+          <div className={`flex-col-center ${styles.foot}`}>
+            <button onClick={(e) => handleCapture(e)} className={`btn1`}>
+              CAPTURE
+            </button>
+          </div>
+        )}
+      </footer>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 .AvatarPage {
   height: calc(100dvh - 30vh);
-  gap: 4vw;
+  gap: 4vh;
   .main {
-    width: 68%;
+    width: 38vh;
     flex-wrap: wrap;
     gap: 2vh;
     /* border: 1px solid red; */
@@ -52,18 +52,6 @@
           width: 3.2vh;
         }
       }
-    }
-    .horiImg {
-      /* width: 32vw; */
-      /* border: 10px solid blue !important; */
-    }
-  }
-  .footer {
-    /* border: 1px solid red; */
-    h2 {
-      font-size: 10vw;
-      color: rgb(215, 54, 54);
-      font-family: "AntonioBold";
     }
   }
 }

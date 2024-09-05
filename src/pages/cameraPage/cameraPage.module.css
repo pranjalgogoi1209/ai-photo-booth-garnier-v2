@@ -1,11 +1,8 @@
 .CameraPage {
   border: 1px solid red;
-  height:calc(100dvh - 30vh);
-  /* background: url("./../../assets/blue-bg.png") center/cover no-repeat; */
-  justify-content: flex-start !important;
-  gap: 5vh;
-  padding-top: 2vh;
-  h1{
+  height: calc(100dvh - 30vh);
+  gap: 4vh;
+  h1 {
     text-transform: uppercase;
   }
   .cameraPageWrapper {
@@ -14,25 +11,13 @@
   }
 
   .main {
-    width: 44vh;
-    min-height: 35vh;
+    width: 75vw;
+    min-height: 58.5vw;
     /* border: 1px solid black; */
     .webcamParent {
       width: 100%;
-      min-height: 95%;
+      min-height: 96%;
       overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #fff;
-      /* background: linear-gradient(white, white) padding-box,
-        linear-gradient(
-            to right,
-            var(--themeColor1),
-            var(--themeColor2),
-            var(--themeColor3)
-          )
-          border-box; */
       border: 0.5vw solid #212121;
       border-radius: 6vw;
       #webcam {
@@ -40,9 +25,9 @@
       }
       .countdown {
         position: absolute;
-        top: 35%;
+        top: 34%;
         left: 48%;
-        color: #65c3cb;
+        color: var(--themeColor1);
         font-size: 8.5vw;
         font-weight: 600;
       }
@@ -53,19 +38,14 @@
   }
 
   .footer {
-    width: 100%;
-    margin-top: auto;
-    margin-bottom: 1vh;
     gap: 2vh;
-    height: 13vh;
-    /* border: 1px solid black; */
-    border: 2px solid red;
+    height: 13.5vh;
+    /* border: 2px solid red; */
 
     .foot {
       width: 100%;
       height: 100%;
       gap: 4vw;
     }
-    
   }
 }

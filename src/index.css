@@ -116,20 +116,19 @@ button {
 
 .btn1 {
   /* color: var(--textColor); */
-  width: 48vw;
-  font-size: 5vw;
+  width: 52vw;
+  font-size: 3.6vh;
   font-weight: 600;
   padding: 0.8vw 0;
   border: 0.3vw solid var(--textColor);
-  border-radius: 3.6vw;
+  border-radius: 10vw;
   background-color: var(--themeColor1);
   color: #fff !important;
   border: none !important;
 }
 
 .btn1:disabled {
-  color: #333e4783;
-  background-color: transparent;
+  opacity: 0.5;
 }
 
 .btn2 {
