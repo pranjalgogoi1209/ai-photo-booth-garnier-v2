@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 
 import homeCard from "../../assets/home/homeImage.png";
 
-export default function HomePage({ setGender }) {
+export default function HomePage({ setGender, setGeneratedImg }) {
   useEffect(() => {
     setGender("");
+    setGeneratedImg("");
   }, []);
 
   return (

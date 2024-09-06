@@ -1,7 +1,7 @@
-import femaleOriginal01 from "./female-original-01.jpg";
-import femaleOriginal02 from "./female-original-02.jpg";
-import femaleOriginal03 from "./female-original-03.jpg";
-import femaleOriginal04 from "./female-original-04.jpg";
+import femaleOriginal01 from "./female-original-01.png";
+import femaleOriginal02 from "./female-original-02.png";
+import femaleOriginal03 from "./female-original-03.png";
+import femaleOriginal04 from "./female-original-04.png";
 
 export {
   femaleOriginal01,

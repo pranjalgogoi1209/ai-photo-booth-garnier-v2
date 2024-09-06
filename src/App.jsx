@@ -27,7 +27,12 @@ export default function App() {
 
       <Routes>
         {/* home-page */}
-        <Route path="/" element={<HomePage setGender={setGender} />} />
+        <Route
+          path="/"
+          element={
+            <HomePage setGender={setGender} setGeneratedImg={setGeneratedImg} />
+          }
+        />
 
         {/* gender page */}
         <Route

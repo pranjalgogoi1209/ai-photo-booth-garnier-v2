@@ -1,53 +1,19 @@
 import {
-    maleCard01, 
-    maleCard02, 
-    maleCard03 , 
-    maleCard04 , 
-    // maleCard05 , 
-    // maleCard06 , 
-    // maleCard07 , 
-    // maleCard08 , 
-    // maleCard09, 
-    // maleCard10,
+  maleCard01,
+  maleCard02,
+  maleCard03,
+  maleCard04,
 } from "../../assets/avatar/cards/male-cards";
 
-import {   
-  femaleCard01 , 
-  femaleCard02 , 
-  femaleCard03 , 
-  femaleCard04 , 
-  // femaleCard05 , 
-  // femaleCard06 , 
-  // femaleCard07 , 
-  // femaleCard08 , 
-  // femaleCard09, 
-  // femaleCard10, 
-} from '../../assets/avatar/cards/female-cards'
+import {
+  femaleCard01,
+  femaleCard02,
+  femaleCard03,
+  femaleCard04,
+} from "../../assets/avatar/cards/female-cards";
 
- const maleCardsArr = [
-  maleCard01 , 
-  maleCard02 , 
-  maleCard03 , 
-  maleCard04 , 
-  // maleCard05 , 
-  // maleCard06 , 
-  // maleCard07 , 
-  // maleCard08, 
-  // maleCard09, 
-  // maleCard10,
-];
+const maleCardsArr = [maleCard01, maleCard02, maleCard03, maleCard04];
 
-const femaleCardsArr = [
-  femaleCard01 , 
-  femaleCard02 , 
-  femaleCard03 , 
-  femaleCard04 , 
-  // femaleCard05 , 
-  // femaleCard06 , 
-  // femaleCard07 , 
-  // femaleCard08 , 
-  // femaleCard09, 
-  // femaleCard10,
-]
+const femaleCardsArr = [femaleCard01, femaleCard02, femaleCard03, femaleCard04];
 
-export { maleCardsArr,femaleCardsArr}
+export { maleCardsArr, femaleCardsArr };
