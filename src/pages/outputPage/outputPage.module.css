@@ -1,19 +1,21 @@
 .OutputPage {
   /* border: 1px solid black; */
+  /* justify-content: flex-start !important; */
   .loaderContainer {
     gap: 10vh;
     width: 70vw;
   }
   .generatedImgContainer {
     /* border: 2px solid red; */
-    gap: 4vh;
+    gap: 1vh;
     .imgContainer {
-      width: 35vh;
-      border-radius: 2vw;
-      overflow: hidden;
+      width: 32vh;
+      /* border-radius: 2vw; */
+      /* overflow: hidden; */
+      /* border: 0.5vw solid black; */
     }
     .btnContainer {
-      gap: 2vh;
+      gap: 1vh;
     }
   }
 }
